@@ -1,5 +1,5 @@
 {
-    "name": "NMD dark",
+    "name": "NMD light",
     "author": "Lupuscoding",
     "variables":
     {
@@ -35,10 +35,10 @@
     },
     "globals":
     {
-        "foreground": "var(white3)",
-        "background": "var(black3)",
-        "caret": "var(white2)",
-        "invisibles": "color(var(white3) alpha(0.35))",
+        "foreground": "var(black1)",
+        "background": "var(white)",
+        "caret": "var(black2)",
+        "invisibles": "color(var(black3) alpha(0.35))",
         "line_highlight": "var(yellow4)",
         "selection": "var(grey)",
         "selection_border": "var(black2)",
@@ -47,9 +47,9 @@
         "find_highlight_foreground": "var(black)",
         "find_highlight": "var(orange3)",
         "brackets_options": "underline",
-        "brackets_foreground": "color(var(white3) alpha(0.65))",
+        "brackets_foreground": "color(var(black3) alpha(0.65))",
         "bracket_contents_options": "underline",
-        "bracket_contents_foreground": "color(var(white3) alpha(0.65))",
+        "bracket_contents_foreground": "color(var(black3) alpha(0.65))",
         "tags_options": "stippled_underline"
     },
     "rules":
@@ -170,13 +170,13 @@
         {
             "name": "Invalid",
             "scope": "invalid",
-            "foreground": "var(white2)",
+            "foreground": "var(black2)",
             "background": "var(red2)"
         },
         {
             "name": "Invalid deprecated",
             "scope": "invalid.deprecated",
-            "foreground": "var(white2)",
+            "foreground": "var(black2)",
             "background": "var(purple)"
         },
         {
@@ -187,7 +187,7 @@
         {
             "name": "YAML String",
             "scope": "string.unquoted.yaml",
-            "foreground": "var(white3)"
+            "foreground": "var(black3)"
         },
         {
             "name": "diff.header",
@@ -247,22 +247,22 @@
         {
             "name": "markup bullets",
             "scope": "markup.list.unnumbered.bullet | (markup.list.numbered punctuation.definition)",
-            "foreground": "color(var(white) alpha(0.67))"
+            "foreground": "color(var(black) alpha(0.67))"
         },
         {
             "name": "markup code",
             "scope": "markup.raw",
-            "background": "color(var(white) alpha(0.094))"
+            "background": "color(var(black) alpha(0.094))"
         },
         {
             "name": "markup punctuation",
             "scope": "markup.raw punctuation.definition.raw",
-            "foreground": "color(var(white) alpha(0.67))"
+            "foreground": "color(var(black) alpha(0.67))"
         },
         {
             "name": "markup punctuation",
             "scope": "text & (punctuation.definition.italic | punctuation.definition.bold | punctuation.definition.raw | punctuation.definition.link | punctuation.definition.metadata | punctuation.definition.image | punctuation.separator.table-cell | punctuation.section.table-header | punctuation.definition.constant)",
-            "foreground": "color(var(white) alpha(0.67))"
+            "foreground": "color(var(black) alpha(0.67))"
         },
         {
             "name": "diff.deleted",
@@ -360,7 +360,7 @@
         {
             "name": "NiceMarkdown Checkbox onHold",
             "scope": "checkbox-onhold.characteristik.markdown-nice",
-            "foreground": "var(white)",
+            "foreground": "var(black)",
             "background": "var(red)"
         },
         {
