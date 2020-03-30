@@ -11,7 +11,12 @@ This is a Sublime Text 3 package, that gives you a new Syntax Highlighting, call
 3. Type the url: https://github.com/LupusCoding/sublime-nmd
 4. Open PackageControl again (see step 1)
 5. Type "Install Package"
-6. Select "NiceMarkdown"
+6. Select "sublime-nmd"
+7. Go to "Preferences" > "Color Scheme...
+8. Select "nmd-dark"
+
+## Supported Filetypes:
+* .nmd
 
 ## Highlighting Features
 * 5 levels of Headlines
