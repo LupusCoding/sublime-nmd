@@ -1,0 +1,48 @@
++-------------------------------+
+| (NMD) NiceMarkDown - Examples |
++-------------------------------+
+
+# Headlines
+# First level
+## Second level
+### Third level
+#### Fourth level
+##### Fifth level
+
+# keywords:
+if
+else
+for
+while
+
+# Highlighted Strings
+"this is my highlighted string"
+
+# Special highlights
+angle bracket open (beware of the spaces): < 
+angle bracket close (beware of the spaces): > 
+square bracket open: [
+aquare bracket closed: ]
+url: http://some/url/to/somewhere or https://another.url/?also=works&with=params
+
+# Checkboxes
+[ ] Open
+[-] WIP
+[!] Important
+[?] Hold / Questions
+[X] Done
+
+# Lists (beware of the spaces)
+## Unordered
+ * first level
+   * second level
+     * third level
+       * fourth level
+         * fifth level
+## Ordered
+ 1. first level
+ 1.1. second level
+ 1.1.1. third level
+ 1.1.1.1. fourth level
+ 1.1.1.1.1. fifth  level
+

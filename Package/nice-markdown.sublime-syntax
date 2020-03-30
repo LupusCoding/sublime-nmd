@@ -1,0 +1,115 @@
+%YAML 1.2
+# [PackageDev] input_type: yaml, target_format: plist, ext: tmLanguage
+---
+# See http://www.sublimetext.com/docs/3/syntax.html
+name: NiceMarkdown
+file_extensions:
+  - nmd
+#first_line_match: '^\#\#\# .*'
+scope: source.markdown-nice
+
+variables:
+  # use this style {{variable}} i.e. {{ident}}
+  ident: '[A-Za-z_][A-Za-z_0-9]*'
+
+contexts:
+  main:
+    # The main context is the initial starting point of our syntax.
+    # Include other contexts from here (or specify them directly).
+    - include: keywords
+    - include: strings
+    - include: characteristiks
+    - include: headlines
+    - include: lists
+
+  keywords:
+    # Keywords are if, else for and while.
+    # Note that blackslashes don't need to be escaped within single quoted
+    # strings in YAML. When using single quoted strings, only single quotes
+    # need to be escaped: this is done by using two single quotes next to each
+    # other.
+    - match: '\b(if|else|for|while)\b'
+      scope: keyword.control.markdown-nice
+
+  strings:
+    # Strings begin and end with quotes, and use backslashes as an escape
+    # character.
+    - match: '"'
+      scope: punctuation.definition.string.begin.markdown-nice
+      push: inside_string
+
+  inside_string:
+    - meta_include_prototype: false
+    - meta_scope: string.quoted.double.markdown-nice
+    - match: '\.'
+      scope: constant.character.escape.markdown-nice
+    - match: '"'
+      scope: punctuation.definition.string.end.markdown-nice
+      pop: true
+
+  characteristiks:
+    - match: ' > '
+      scope: arror-right.characteristik.markdown-nice
+    - match: ' < '
+      scope: arror-left.characteristik.markdown-nice
+    - match: '^\t{{ident}}'
+      scope: intended.characteristik.markdown-nice
+    - match: '(http|https)://([a-zA-Z0-9\-\_\.\/\?\+\=\$\&\%\@\#\(\)])*'
+      scope: link.characteristik.markdown-nice
+    - match: '\['
+      scope: bracket-opening.characteristik.markdown-nice
+      push: inside_checkbox
+    - match: '\]'
+      scope: bracket-closing.characteristik.markdown-nice
+      pop: true
+
+  inside_checkbox:
+    - match: ' '
+      scope: checkbox-empty.characteristik.markdown-nice
+      pop: true
+    - match: '(x|X)'
+      scope: checkbox-success.characteristik.markdown-nice
+      pop: true
+    - match: '\-'
+      scope: checkbox-wip.characteristik.markdown-nice
+      pop: true
+    - match: '\!'
+      scope: checkbox-onhold.characteristik.markdown-nice
+      pop: true
+    - match: '\?'
+      scope: checkbox-waiting.characteristik.markdown-nice
+      pop: true
+
+  headlines:
+    - match: '^# '
+      scope: first.headline.markdown-nice
+    - match: '^## '
+      scope: second.headline.markdown-nice
+    - match: '^### '
+      scope: third.headline.markdown-nice
+    - match: '^#### '
+      scope: fourth.headline.markdown-nice
+    - match: '^##### '
+      scope: fifth.headline.markdown-nice
+
+  lists:
+    - match: ^\s(\*|\+|\-)\s
+      scope: level1-ul.lists.markdown-nice
+    - match: ^\s\s\s(\*|\+|\-)\s
+      scope: level2-ul.lists.markdown-nice
+    - match: ^\s\s\s\s\s(\*|\+|\-)\s
+      scope: level3-ul.lists.markdown-nice
+    - match: ^\s\s\s\s\s\s\s(\*|\+|\-)\s
+      scope: level4-ul.lists.markdown-nice
+    - match: ^\s\s\s\s\s\s\s\s\s(\*|\+|\-)\s
+      scope: level5-ul.lists.markdown-nice
+    - match: ^\s([0-9]+)\.\s
+      scope: level1-ol.lists.markdown-nice
+    - match: ^\s+([0-9]+)\.([0-9]+)\.\s
+      scope: level2-ol.lists.markdown-nice
+    - match: ^\s+([0-9]+)\.([0-9]+)\.([0-9]+)\.\s
+      scope: level3-ol.lists.markdown-nice
+    - match: ^\s+([0-9]+)\.([0-9]+)\.([0-9]+)\.([0-9]+)\.\s
+      scope: level4-ol.lists.markdown-nice
+    - match: ^\s+([0-9]+)\.([0-9]+)\.([0-9]+)\.([0-9]+)\.([0-9]+)\.\s
+      scope: level5-ol.lists.markdown-nice
