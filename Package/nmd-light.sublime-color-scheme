@@ -1,5 +1,5 @@
 {
-    "name": "NMD light",
+    "name": "NMD light (test)",
     "author": "Lupuscoding",
     "variables":
     {
@@ -15,10 +15,10 @@
         "orange4": "hsl(32, 98%, 50%)",
         "orange5": "hsl(32, 98%, 64%)",
         "purple": "hsl(261, 100%, 75%)",
-        "purple2": "hsl(338, 95%, 54%)",
-        "purple3": "hsl(338, 95%, 44%)",
-        "purple4": "hsl(338, 95%, 33%)",
-        "purple5": "hsl(338, 95%, 22%)",
+        "purple2": "hsl(261, 95%, 54%)",
+        "purple3": "hsl(261, 95%, 44%)",
+        "purple4": "hsl(261, 95%, 33%)",
+        "purple5": "hsl(261, 95%, 22%)",
         "red": "hsl(0, 93%, 64%)",
         "red2": "hsl(338, 95%, 54%)",
         "white": "hsl(0, 0%, 95%)",
@@ -42,14 +42,15 @@
         "caret": "var(grey)",
         "block_caret": "var(yellow3)",
         "line_highlight": "var(yellow4)",
+        "gutter": "var(grey2)",
+        "gutter_foreground": "var(black3)",
         "invisibles": "color(var(black3) alpha(0.35))",
         "selection": "var(grey)",
         "selection_border": "var(black2)",
-        "selection_foreground": "var(white)",
         "misspelling": "var(red2)",
         "active_guide": "var(orange2))",
-        "find_highlight_foreground": "var(black)",
         "find_highlight": "var(orange3)",
+        "find_highlight_foreground": "var(black)",
         "brackets_options": "underline",
         "brackets_foreground": "color(var(black3) alpha(0.65))",
         "bracket_contents_options": "underline",
@@ -61,27 +62,27 @@
         {
             "name": "Comment",
             "scope": "comment",
-            "foreground": "var(yellow5)"
+            "foreground": "var(grey2)"
         },
         {
             "name": "String",
             "scope": "string",
-            "foreground": "var(yellow)"
+            "foreground": "var(green1)"
         },
         {
             "name": "Number",
             "scope": "constant.numeric",
-            "foreground": "var(purple)"
+            "foreground": "var(red)"
         },
         {
             "name": "Built-in constant",
             "scope": "constant.language",
-            "foreground": "var(purple)"
+            "foreground": "var(red)"
         },
         {
             "name": "User-defined constant",
             "scope": "constant.character, constant.other",
-            "foreground": "var(purple)"
+            "foreground": "var(red)"
         },
         {
             "name": "Variable",
@@ -90,22 +91,22 @@
         {
             "name": "Keyword",
             "scope": "keyword - (source.c keyword.operator | source.c++ keyword.operator | source.objc keyword.operator | source.objc++ keyword.operator), keyword.operator.word",
-            "foreground": "var(purple2)"
+            "foreground": "var(red2)"
         },
         {
             "name": "Annotation Punctuation",
             "scope": "punctuation.definition.annotation",
-            "foreground": "var(purple2)"
+            "foreground": "var(red2)"
         },
         {
             "name": "JavaScript Dollar",
             "scope": "variable.other.dollar.only.js",
-            "foreground": "var(purple2)"
+            "foreground": "var(red2)"
         },
         {
             "name": "Storage",
             "scope": "storage",
-            "foreground": "var(purple2)"
+            "foreground": "var(red2)"
         },
         {
             "name": "Storage type",
@@ -116,12 +117,12 @@
         {
             "name": "Entity name",
             "scope": "entity.name - (entity.name.filename | entity.name.section | entity.name.tag | entity.name.label)",
-            "foreground": "var(yellow2)"
+            "foreground": "var(green2)"
         },
         {
             "name": "Inherited class",
             "scope": "entity.other.inherited-class",
-            "foreground": "var(yellow2)",
+            "foreground": "var(green2)",
             "font_style": "italic underline"
         },
         {
@@ -139,7 +140,7 @@
         {
             "name": "Tag name",
             "scope": "entity.name.tag",
-            "foreground": "var(purple2)"
+            "foreground": "var(red2)"
         },
         {
             "name": "Tag attribute",
@@ -175,13 +176,13 @@
             "name": "Invalid",
             "scope": "invalid",
             "foreground": "var(black2)",
-            "background": "var(purple2)"
+            "background": "var(red2)"
         },
         {
             "name": "Invalid deprecated",
             "scope": "invalid.deprecated",
             "foreground": "var(black2)",
-            "background": "var(purple)"
+            "background": "var(red)"
         },
         {
             "name": "JSON String",
@@ -271,7 +272,7 @@
         {
             "name": "diff.deleted",
             "scope": "markup.deleted",
-            "foreground": "var(purple2)"
+            "foreground": "var(red2)"
         },
         {
             "name": "diff.inserted",
@@ -316,17 +317,17 @@
             "foreground": "color(var(yellow) alpha(0.63))"
         },
         {
-        	"name": "NiceMarkdown >",
+            "name": "NiceMarkdown >",
             "scope": "arror-right.characteristik.markdown-nice",
             "foreground": "var(red)"
         },
         {
-        	"name": "NiceMarkdown <",
+            "name": "NiceMarkdown <",
             "scope": "arror-left.characteristik.markdown-nice",
             "foreground": "var(red)"
         },
         {
-        	"name": "NiceMarkdown Tab",
+            "name": "NiceMarkdown Tab",
             "scope": "intended.characteristik.markdown-nice",
             "foreground": "var(purple)"
         },
@@ -338,12 +339,12 @@
         {
             "name": "NiceMarkdown [",
             "scope": "bracket-opening.characteristik.markdown-nice",
-            "foreground": "var(yellow)"
+            "foreground": "var(yellow5)"
         },
         {
             "name": "NiceMarkdown ]",
             "scope": "bracket-closing.characteristik.markdown-nice",
-            "foreground": "var(yellow)"
+            "foreground": "var(yellow5)"
         },
         {
             "name": "NiceMarkdown Checkbox Empty",
@@ -359,7 +360,7 @@
             "name": "NiceMarkdown Checkbox WIP",
             "scope": "checkbox-wip.characteristik.markdown-nice",
             "foreground": "var(blue)",
-            "background": "var(white3)"
+            "background": "var(grey2)"
         },
         {
             "name": "NiceMarkdown Checkbox onHold",
@@ -373,17 +374,17 @@
             "foreground": "var(orange)"
         },
         {
-        	"name": "NiceMarkdown H1",
+            "name": "NiceMarkdown H1",
             "scope": "first.headline.markdown-nice",
             "foreground": "var(green1)"
         },
         {
-        	"name": "NiceMarkdown H2",
+            "name": "NiceMarkdown H2",
             "scope": "second.headline.markdown-nice",
             "foreground": "var(green2)"
         },
         {
-        	"name": "NiceMarkdown H3",
+            "name": "NiceMarkdown H3",
             "scope": "third.headline.markdown-nice",
             "foreground": "var(green3)"
         },
@@ -398,17 +399,17 @@
             "foreground": "var(green5)"
         },
         {
-        	"name": "NiceMarkdown UL-Level1",
+            "name": "NiceMarkdown UL-Level1",
             "scope": "level1-ul.lists.markdown-nice",
             "foreground": "var(red)"
         },
         {
-        	"name": "NiceMarkdown UL-Level2",
+            "name": "NiceMarkdown UL-Level2",
             "scope": "level2-ul.lists.markdown-nice",
             "foreground": "var(purple2)"
         },
         {
-        	"name": "NiceMarkdown UL-Level3",
+            "name": "NiceMarkdown UL-Level3",
             "scope": "level3-ul.lists.markdown-nice",
             "foreground": "var(purple3)"
         },
@@ -423,17 +424,17 @@
             "foreground": "var(purple5)"
         },
         {
-        	"name": "NiceMarkdown OL-Level1",
+            "name": "NiceMarkdown OL-Level1",
             "scope": "level1-ol.lists.markdown-nice",
             "foreground": "var(orange)"
         },
         {
-        	"name": "NiceMarkdown OL-Level2",
+            "name": "NiceMarkdown OL-Level2",
             "scope": "level2-ol.lists.markdown-nice",
             "foreground": "var(orange2)"
         },
         {
-        	"name": "NiceMarkdown OL-Level3",
+            "name": "NiceMarkdown OL-Level3",
             "scope": "level3-ol.lists.markdown-nice",
             "foreground": "var(orange3)"
         },

@@ -13,7 +13,7 @@ This is a Sublime Text 3 package, that gives you a new Syntax Highlighting, call
 5. Type "Install Package"
 6. Select "sublime-nmd"
 7. Go to "Preferences" > "Color Scheme...
-8. Select "nmd-dark"
+8. Select "nmd-dark" or "nmd-light"
 
 ## Supported Filetypes:
 * .nmd
