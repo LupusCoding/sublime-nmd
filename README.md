@@ -28,4 +28,7 @@ This is a Sublime Text 3 package, that gives you a new Syntax Highlighting, call
 * quoted strings
 * urls
 
-![Example image](./example.png)
+## Examples
+Dark Theme | Light Theme
+---|---
+![Example dark theme](./example-dark.png) | ![Example light theme](./example-light.png)
